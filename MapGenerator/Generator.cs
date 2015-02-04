@@ -17,18 +17,24 @@ namespace MapGenerator
         }
 
         private byte[,] map;
+        private int sizeX;
+        private int sizeY;
+        private int allCells;
+        private int startMountains;
 
-        public Generator()
+        public Generator(int X, int Y, int amountOfMountains = 1)
         {
-
+            sizeX = X;
+            sizeY = Y;
+            allCells = sizeX * sizeY;
+            startMountains = amountOfMountains;
+            map = new byte[sizeX, sizeY];
         }
 
         /// <summary>
         /// Generate a new map as 2DArray
         /// </summary>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
-        public void generate(int X, int Y)
+        public void generate()
         {
             
         }
