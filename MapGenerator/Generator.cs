@@ -8,6 +8,16 @@ namespace MapGenerator
 {
     class Generator
     {
+        public byte[,] generatedMap
+        {
+            get
+            {
+                return map;
+            } 
+        }
+
+        private byte[,] map;
+
         public Generator()
         {
 
