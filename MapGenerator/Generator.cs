@@ -8,6 +8,11 @@ namespace MapGenerator
 {
     class Generator
     {
+        public Generator()
+        {
+
+        }
+
         public void generate(int X, int Y)
         {
             
