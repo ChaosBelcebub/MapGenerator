@@ -13,6 +13,11 @@ namespace MapGenerator
 
         }
 
+        /// <summary>
+        /// Generate a new map as 2DArray
+        /// </summary>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
         public void generate(int X, int Y)
         {
             
