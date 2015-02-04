@@ -22,12 +22,14 @@ namespace MapGenerator
         private int allCells;
         private int startMountains;
 
-        public Generator(int X, int Y, int amountOfMountains = 1)
+        Random rnd = new Random();
+
+        public Generator(int X, int Y, float percentageOfMountains = 0.1f)
         {
             sizeX = X;
             sizeY = Y;
             allCells = sizeX * sizeY;
-            startMountains = amountOfMountains;
+            startMountains = (int)(allCells * percentageOfMountains);
             map = new byte[sizeX, sizeY];
         }
 
@@ -37,6 +39,18 @@ namespace MapGenerator
         public void generate()
         {
             
+        }
+
+        /// <summary>
+        /// Set the first cells at the given percentage
+        /// </summary>
+        private void setFirstCells()
+        {
+            //add random heights to all the wanted cells
+            for (int i = 0; i < startMountains; i++)
+            {
+                map[(int)rnd.Next(sizeX), (int)rnd.Next(sizeY)] = (byte)rnd.Next(255);
+            }
         }
     }
 }
